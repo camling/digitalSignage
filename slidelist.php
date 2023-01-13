@@ -19,7 +19,7 @@ $imageArray = $sortedImages->getImageArray();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Images in time range</title>
+    <title>Images and videos in time range</title>
     <style> 
 
 .images_thumbs {
@@ -49,9 +49,11 @@ $imageArray = $sortedImages->getImageArray();
 <body>
 
 <h1> Images in time range</h1>
+<p><?php echo "Today is " . date("m/d/Y"); ?> </p>
 
 <div class="images_container">
 <div class="images_list">
+<h2>Text List</h2>
 <ul>
 <?php
 foreach($imageArray as $imageFileName)
@@ -63,12 +65,11 @@ foreach($imageArray as $imageFileName)
     echo "</li>";
 }
 
-
-
 ?>
 
 </ul>
 </div>
+<h2>Image List</h2>
 <div class="images_thumbs">
     <?php
 foreach($imageArray as $imageFileName)
